@@ -125,6 +125,5 @@
   },
   "resolutions": {
     "canvas": "./__BLOCKED_MODULE"
-  },
-  "packageManager": "yarn@3.6.4"
+  }
 }
