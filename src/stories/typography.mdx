@@ -1,0 +1,130 @@
+import { Meta, Title, Typeset, Source, Unstyled } from "@storybook/blocks";
+import Typography from "@core/components/typography";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "@theme/default";
+import FontSizes from "@system/fontSizes";
+import FontWeights from "@system/fontWeights";
+import styled from "styled-components";
+
+<Meta title="System/Typography" />
+
+export const SampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+
+export const typographyData = [
+  {
+    key: "H1",
+    component: Typography.H1,
+  },
+  {
+    key: "H2",
+    component: Typography.H2,
+  },
+  {
+    key: "H3",
+    component: Typography.H3,
+  },
+  {
+    key: "B1",
+    component: Typography.B1,
+  },
+  {
+    key: "B2",
+    component: Typography.B2,
+  },
+  {
+    key: "Caption",
+    component: Typography.Caption,
+  },
+  {
+    key: "Overline",
+    component: Typography.Overline,
+  },
+  {
+    key: "Breadcrumb",
+    component: Typography.Breadcrumb,
+  },
+];
+
+export const BlockWrapper = styled.div`
+  border: 1px solid hsla(203, 50%, 30%, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  border-radius: 4px;
+  padding: 30px;
+  font-family:
+    Poppins,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+`;
+
+export const RowWrapper = styled.div`
+  display: flex;
+  gap: 30px;
+  align-items: baseline;
+  margin-bottom: 10px;
+`;
+
+export const FontSizeLabel = styled.span`
+  font-size: 12px;
+  width: 70px;
+  color: rgba(46, 52, 56, 0.6);
+`;
+
+export const FontSizeText = styled.strong`
+  font-weight: ${FontWeights.black};
+`;
+
+<Title>Typography</Title>
+
+**Font:** Poppins
+
+<ThemeProvider theme={defaultTheme}>
+  ## Font Sizes
+  <Unstyled>
+    <BlockWrapper>
+      {Object.entries(FontSizes).map(([key, value]) => (
+        <RowWrapper key={key}>
+          <FontSizeLabel>{key}</FontSizeLabel>
+          <FontSizeText style={{ fontSize: value }}>{SampleText}</FontSizeText>
+        </RowWrapper>
+      ))}
+    </BlockWrapper>
+  </Unstyled>
+
+## Font Weights
+
+{" "}
+<Unstyled>
+  <BlockWrapper>
+    {Object.entries(FontWeights).map(([key, value]) => (
+      <RowWrapper key={key}>
+        <FontSizeLabel>{key}</FontSizeLabel>
+        <strong style={{ fontWeight: value }}>{SampleText}</strong>
+      </RowWrapper>
+    ))}
+  </BlockWrapper>
+</Unstyled>
+
+## Typography
+
+{" "}
+<Unstyled>
+  <BlockWrapper>
+    {typographyData.map(({ key, component: TypographyComponent }) => (
+      <RowWrapper key={key}>
+        <FontSizeLabel>{key}</FontSizeLabel>
+        <TypographyComponent style={{ margin: "0" }}>{SampleText}</TypographyComponent>
+      </RowWrapper>
+    ))}
+  </BlockWrapper>
+</Unstyled>
+
+</ThemeProvider>

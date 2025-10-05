@@ -1,0 +1,8 @@
+{
+  "name": "@xyz/design-system/themes",
+  "private": true,
+  "main": "../dist/themes.cjs.js",
+  "module": "../dist/themes.esm.js",
+  "jsnext:main": "../dist/themes.esm.js",
+  "types": "../dist/theme/index.d.ts"
+}

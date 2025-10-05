@@ -1,0 +1,14 @@
+import { Meta, Title } from "@storybook/blocks";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "@theme/default";
+import Vectors from "@vectors";
+
+<Meta title="System/Vectors" />
+
+<Title>Vectors</Title>
+
+<ThemeProvider theme={defaultTheme}>
+  {Object.entries(Vectors).map(([name, Vector]) => (
+    <Vector width="300px" />
+  ))}
+</ThemeProvider>

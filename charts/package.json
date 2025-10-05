@@ -1,0 +1,8 @@
+{
+  "name": "@xyz/design-system/charts",
+  "private": true,
+  "main": "../dist/charts.cjs.js",
+  "module": "../dist/charts.esm.js",
+  "jsnext:main": "../dist/charts.esm.js",
+  "types": "../dist/charts/index.d.ts"
+}

@@ -1,0 +1,19 @@
+# Ignore:
+node_modules
+.vscode
+
+# build output
+dist
+build
+lib
+
+# unit-test coverage
+coverage
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv

@@ -1,0 +1,22 @@
+import { Meta, Title, IconGallery, IconItem } from "@storybook/blocks";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "@theme/default";
+import Icons from "@icons";
+
+export const renderIcons = () => {
+  const sortedIcons = Object.entries(Icons);
+
+return sortedIcons.map(([iconName, Icon]) => (
+
+<IconItem key={iconName} name={iconName.replace("Icon", "")}>
+  <Icon />
+</IconItem>
+)); }
+
+<Meta title="System/Iconography" />
+
+<Title>Iconography</Title>
+
+<ThemeProvider theme={defaultTheme}>
+  <IconGallery>{renderIcons()}</IconGallery>
+</ThemeProvider>

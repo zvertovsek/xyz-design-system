@@ -1,0 +1,67 @@
+import { Meta, Title, ColorPalette, ColorItem } from "@storybook/blocks";
+import { defaultTheme } from "@theme/default";
+
+export const colors = [
+  {
+    title: "white",
+    subtitle: "White",
+    colors: { white: defaultTheme.colorPalettes.white },
+  },
+  {
+    title: "black",
+    subtitle: "Black",
+    colors: { black: defaultTheme.colorPalettes.black },
+  },
+  {
+    title: "primary.accent",
+    subtitle: "The primary color",
+    colors: defaultTheme.colorPalettes.primary.accent,
+  },
+  {
+    title: "primary.ai",
+    subtitle: "The AI color",
+    colors: defaultTheme.colorPalettes.primary.ai,
+  },
+  {
+    title: "primary.default",
+    subtitle: "Greys",
+    colors: defaultTheme.colorPalettes.primary.default,
+  },
+  {
+    title: "rag.danger",
+    subtitle: "Error colors",
+    colors: defaultTheme.colorPalettes.rag.danger,
+  },
+  {
+    title: "rag.success",
+    subtitle: "Success colors",
+    colors: defaultTheme.colorPalettes.rag.success,
+  },
+  {
+    title: "rag.warning",
+    subtitle: "Warning colors",
+    colors: defaultTheme.colorPalettes.rag.warning,
+  },
+  {
+    title: "secondary.color1",
+    colors: defaultTheme.colorPalettes.secondary.color1,
+  },
+  {
+    title: "secondary.color2",
+    colors: defaultTheme.colorPalettes.secondary.color2,
+  },
+  {
+    title: "secondary.color3",
+    colors: defaultTheme.colorPalettes.secondary.color3,
+  },
+];
+
+<Meta title="System/Colors" />
+
+<Title>Colors</Title>
+
+<ColorPalette>
+  {colors.map((color, index) => (
+    <ColorItem key={index} {...color} />
+  ))}
+</ColorPalette>

@@ -1,0 +1,8 @@
+{
+  "name": "@xyz/design-system/vectors",
+  "private": true,
+  "main": "../dist/vectors.cjs.js",
+  "module": "../dist/vectors.esm.js",
+  "jsnext:main": "../dist/vectors.esm.js",
+  "types": "../dist/vectors/index.d.ts"
+}

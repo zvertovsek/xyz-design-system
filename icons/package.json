@@ -1,0 +1,8 @@
+{
+  "name": "@xyz/design-system/icons",
+  "private": true,
+  "main": "../dist/icons.cjs.js",
+  "module": "../dist/icons.esm.js",
+  "jsnext:main": "../dist/icons.esm.js",
+  "types": "../dist/icons/index.d.ts"
+}

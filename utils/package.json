@@ -1,0 +1,8 @@
+{
+  "name": "@xyz/design-system/utils",
+  "private": true,
+  "main": "../dist/utils.cjs.js",
+  "module": "../dist/utils.esm.js",
+  "jsnext:main": "../dist/utils.esm.js",
+  "types": "../dist/utils/index.d.ts"
+}

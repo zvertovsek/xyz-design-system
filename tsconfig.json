@@ -1,0 +1,68 @@
+{ 
+  "compilerOptions": {
+    "target": "es2015", 
+    "lib": ["dom", "dom.iterable", "esnext"],   
+    "jsx": "react-jsx",                                
+    
+    /* Modules */
+    "module": "esnext", 
+    "moduleResolution": "node", 
+    "baseUrl": "./src", 
+    "paths": {
+      "@core/*": ["core/*"],
+      "@charts/*": ["charts/*"],
+      "@icons": ["icons"],
+      "@icons/*": ["icons/*"],
+      "@system": ["system"],
+      "@system/*": ["system/*"],
+      "@theme": ["theme"],
+      "@theme/*": ["theme/*"],
+      "@utils": ["utils"],
+      "@utils/*": ["utils/*"],
+      "@test-utils/*": ["test/utils/*"],
+      "@vectors": ["vectors"],
+      "@vectors/*": ["vectors/*"],
+    },
+    "resolveJsonModule": true,
+    
+    /* JavaScript Support */
+    "allowJs": false, 
+    
+    /* Emit */
+    "declaration": true,  
+    "declarationMap": true,
+    "declarationDir": "dist",
+    "sourceMap": true, 
+    "outDir": "./dist",
+    
+    /* Interop Constraints */
+    "isolatedModules": false, 
+    "esModuleInterop": true,  
+    "forceConsistentCasingInFileNames": true, 
+
+    /* Type Checking */
+    "strict": true,  
+    "noImplicitAny": false, 
+    "strictNullChecks": true,  
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    
+    /* Completeness */
+    "skipLibCheck": true, 
+    
+    /* Plugins. */
+    "plugins": [{
+      "transform": "@zerollup/ts-transform-paths",
+      "exclude": ["*"]
+    }]
+  },
+  "include": [
+    "src",
+    "typings.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+  ]
+}

@@ -1,0 +1,22 @@
+# don't lint:
+node_modules
+.vscode
+.storybook
+
+# test mocks
+test/mocks
+
+# config files
+.eslintrc.js
+.prettierrc.js
+
+# don't lint build output
+dist
+build
+lib
+storybook-static
+
+# don't lint unit-test coverage
+coverage
+
+src/theme/styled.d.ts
